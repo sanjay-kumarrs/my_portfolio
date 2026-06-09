@@ -47,7 +47,7 @@ You can run this website on any local development server.
    python -m http.server 8080 --bind 127.0.0.1
    ```
 3. Open your browser and navigate to:
-   **[http://127.0.0.1:8080](http://127.0.0.1:8080)**
+   **https://sanjay-kumarrs.github.io/my_portfolio/**
 
 ### Option 2: Using Node (http-server)
 1. Install globally: `npm install -g http-server`
