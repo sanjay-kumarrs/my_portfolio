@@ -7,11 +7,11 @@
 const PROJECTS = [
     {
         id: "risk-assessment",
-        title: "SwiftSafe IT/OT Risk Assessment Engine",
+        title: "Risk Assessment Engine",
         shortDesc: "A comprehensive web-based risk management platform for IT, OT, and IoT assets. Features an Obsidian dark-themed dashboard with real-time KPIs, donut charts, asset registers, CVE tracking, and a 5x5 interactive risk matrix.",
         category: "cybersecurity",
         tags: ["Flask", "SQLAlchemy", "SQLite", "Plotly.js", "Python", "WTForms"],
-        githubLink: "https://github.com/sanjay-kumars/swiftsafe-risk-engine",
+        githubLink: "https://github.com/sanjay-kumarrs/Risk_Assessment",
         demoLink: "#contact",
         details: {
             overview: "A comprehensive platform to assess and manage cyber risk across physical (OT) and digital (IT/IoT) environments. Standardizes security auditing with real-time analytics.",
@@ -34,7 +34,7 @@ const PROJECTS = [
     },
     {
         id: "netcat-tool",
-        title: "H_S_NetCAT — Network Security Tool",
+        title: "NetCAT — Network Security Tool",
         shortDesc: "A comprehensive CLI-based Python tool for network security assessments and penetration testing. Incorporates multi-threaded TCP/UDP port scanning, service banner grabbing, DNS enumeration, custom packet crafting, and reverse/bind shells.",
         category: "cybersecurity",
         tags: ["Python", "Socket", "Scapy", "Paramiko", "dnspython", "CLI"],
@@ -59,7 +59,7 @@ const PROJECTS = [
     },
     {
         id: "portsmash",
-        title: "H_S_Port — PortSmash Detection Tool",
+        title: "PortSmash Detection Tool",
         shortDesc: "A static vulnerability detection suite for PortSmash (CVE-2018-5407) side-channel attacks. Analyzes CPU topology, audits scheduler configurations, measures execution port contention timing, and displays metrics via a live Flask dashboard.",
         category: "cybersecurity",
         tags: ["Flask", "psutil", "py-cpuinfo", "Timing Analysis", "Side-Channel"],
@@ -84,11 +84,11 @@ const PROJECTS = [
     },
     {
         id: "sidechannel-side",
-        title: "H_S_SIDE — Static Analysis & Detection Tool",
+        title: "Side_Channel — Static Analysis & Detection Tool",
         shortDesc: "A modular, interactive CLI tool to detect side-channel attack vectors. Covers timing analysis, cache-hierarchy audits (Flush+Reload indicators), RAPL power domains (PLATYPUS), speculative execution vulnerabilities, and crypto code analysis.",
         category: "cybersecurity",
         tags: ["Python", "Sysfs", "WMI", "Speculative Execution", "ASLR"],
-        githubLink: "https://github.com/sanjay-kumars/hs-side-channel-audit",
+        githubLink: "https://github.com/sanjay-kumarrs/Side_Channel_Analysis",
         demoLink: "#contact",
         details: {
             overview: "A specialized tool that audits system settings, kernel variables, and hardware configurations to assess susceptibility to 25+ distinct CVE side-channel vulnerabilities.",
@@ -108,11 +108,11 @@ const PROJECTS = [
     },
     {
         id: "siem-logging",
-        title: "SwiftSafe IT/OT SIEM Platform",
+        title: "Logging and Alerting - SIEM Platform",
         shortDesc: "A real-time Security Information and Event Management platform. Aggregates network anomalies, brute-force logs, and PLC/SCADA signals, evaluates alerts via sliding windows, auto-generates incidents, and sends Slack/email alerts.",
         category: "cybersecurity",
         tags: ["Flask", "SQLAlchemy", "SQLite", "psutil", "Jinja2", "SMTP", "Webhooks"],
-        githubLink: "https://github.com/sanjay-kumars/swiftsafe-siem",
+        githubLink: "https://github.com/sanjay-kumarrs/Logging_and_Alerting",
         demoLink: "#contact",
         details: {
             overview: "A lightweight SIEM designed for mixed IT and industrial OT infrastructures, tracking physical host health, unauthorized PLC commands, and security log anomalies.",
@@ -133,7 +133,7 @@ const PROJECTS = [
     },
     {
         id: "patch-manager",
-        title: "SwiftSafe Patch & Hardening Suite",
+        title: "Patch & Hardening Suite",
         shortDesc: "An asset inventory and device hardening manager aligned with CIS benchmarks. Conducts 27 security controls check on endpoints (OS, Auth, Logging, OT/ICS), monitors missing CVE patches, and generates audit reports.",
         category: "cybersecurity",
         tags: ["Flask", "SQLite", "Database", "CIS Controls", "PowerShell", "Security Audit"],
@@ -158,11 +158,11 @@ const PROJECTS = [
     },
     {
         id: "remote-guard",
-        title: "SwiftSafe Remote Access Control Guard",
+        title: "Remote Access Control Guard",
         shortDesc: "A real-time intrusion prevention system monitoring remote control vectors. Integrates with OS Firewalls (netsh/iptables) to automatically block brute-force attacks and port scans, featuring honeypots and an interactive simulator.",
         category: "cybersecurity",
         tags: ["Flask", "psutil", "Windows Firewall", "Honeypot", "IDS/IPS", "Python"],
-        githubLink: "https://github.com/sanjay-kumars/remote-access-guard",
+        githubLink: "https://github.com/sanjay-kumarrs/remote_access_control",
         demoLink: "#contact",
         details: {
             overview: "A lightweight host-based IDS/IPS designed to protect network services (FTP, SSH, Telnet, RDP, WinRM) in IT/OT setups, using rules to blacklist probing IPs automatically.",
@@ -235,7 +235,7 @@ const PROJECTS = [
         shortDesc: "A robust Django-based culinary content management platform. Features user profile management, recipe search, ratings, image uploads, and an external API integration for automated nutritional calorie estimations.",
         category: "webdev",
         tags: ["Django", "Python", "SQLite", "REST API", "HTML", "CSS", "JavaScript"],
-        githubLink: "https://github.com/sanjay-kumars/delicious-recipe-app",
+        githubLink: "https://github.com/sanjay-kumarrs/food-recipe",
         demoLink: "#contact",
         details: {
             overview: "A community-focused web platform allowing food enthusiasts to document, share, and review recipes, with integrated API checks to measure calorie counts instantly.",
@@ -259,7 +259,7 @@ const PROJECTS = [
         shortDesc: "A full-stack MERN Web App for plant enthusiasts. Features secure JWT authentication, a responsive product catalog, shopping cart state management, and an admin dashboard to control products and orders.",
         category: "webdev",
         tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Redux"],
-        githubLink: "https://github.com/sanjay-kumars/plant-mern-ecommerce",
+        githubLink: "https://github.com/sanjay-kumarrs/e_plant_web",
         demoLink: "#contact",
         details: {
             overview: "A modern, responsive e-commerce web platform showing plant products with custom categories, filtering, authentication systems, and smooth animations.",
