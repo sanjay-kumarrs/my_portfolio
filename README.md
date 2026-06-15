@@ -53,3 +53,4 @@ You can run this website on any local development server.
 1. Install globally: `npm install -g http-server`
 2. Run in the project folder: `http-server -p 8080`
 3. Access at: `http://localhost:8080`
+.
