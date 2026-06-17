@@ -63,7 +63,7 @@ const PROJECTS = [
         shortDesc: "A static vulnerability detection suite for PortSmash (CVE-2018-5407) side-channel attacks. Analyzes CPU topology, audits scheduler configurations, measures execution port contention timing, and displays metrics via a live Flask dashboard.",
         category: "cybersecurity",
         tags: ["Flask", "psutil", "py-cpuinfo", "Timing Analysis", "Side-Channel"],
-        githubLink: "https://github.com/sanjay-kumars/portsmash-detector",
+        githubLink: "https://github.com/sanjay-kumarrs/PortSmash",
         demoLink: "#contact",
         details: {
             overview: "Statically detects CPU hardware exposure to SMT execution port contention timing leakage, helping system administrators identify side-channel vulnerabilities in multi-tenant environments.",
