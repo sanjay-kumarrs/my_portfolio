@@ -137,7 +137,7 @@ const PROJECTS = [
         shortDesc: "An asset inventory and device hardening manager aligned with CIS benchmarks. Conducts 27 security controls check on endpoints (OS, Auth, Logging, OT/ICS), monitors missing CVE patches, and generates audit reports.",
         category: "cybersecurity",
         tags: ["Flask", "SQLite", "Database", "CIS Controls", "PowerShell", "Security Audit"],
-        githubLink: "https://github.com/sanjay-kumars/swiftsafe-patch-hardening",
+        githubLink: "https://github.com/sanjay-kumarrs/Patch_management",
         demoLink: "#contact",
         details: {
             overview: "Helps administrators secure both traditional IT computers and sensitive manufacturing OT devices by tracking missing vendor patches and checking configuration baselines.",
