@@ -38,7 +38,7 @@ const PROJECTS = [
         shortDesc: "A comprehensive CLI-based Python tool for network security assessments and penetration testing. Incorporates multi-threaded TCP/UDP port scanning, service banner grabbing, DNS enumeration, custom packet crafting, and reverse/bind shells.",
         category: "cybersecurity",
         tags: ["Python", "Socket", "Scapy", "Paramiko", "dnspython", "CLI"],
-        githubLink: "https://github.com/sanjay-kumars/hs-netcat-tool",
+        githubLink: "https://github.com/sanjay-kumarrs/NetCAT",
         demoLink: "#contact",
         details: {
             overview: "A powerful, Swiss-army-knife network tool designed for security analysts to perform rapid target host discovery, port audits, vulnerability detection, and secure payload transport.",
@@ -188,7 +188,7 @@ const PROJECTS = [
         shortDesc: "An AI-powered speech therapy and real-time assistive application for individuals with stuttering. Utilizes machine learning classification models for speech analysis and a cross-platform Flutter/Dart interface.",
         category: "ai-ml",
         tags: ["Python", "Flask", "Machine Learning", "Dart", "Flutter", "Audio Processing"],
-        githubLink: "https://github.com/sanjay-kumars/soundwave-speech-assist",
+        githubLink: "https://github.com/sanjay-kumarrs/Soundwave",
         demoLink: "#contact",
         details: {
             overview: "SOUNDWAVE processes live audio feeds, classifies stuttering events (repetitions, prolongations, blocks) using ML models, and delivers speech-pacing auditory feedback to help speakers.",
