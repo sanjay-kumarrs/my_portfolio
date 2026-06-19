@@ -44,7 +44,7 @@ You can run this website on any local development server.
 1. Open a terminal in the project directory.
 2. Run the built-in HTTP server:
    ```bash
-   python -m http.server 8080 --bind 127.0.0.1 ......
+   python -m http.server 8080 --bind 127.0.0.1 
    ```
 3. Open your browser and navigate to:
    **https://sanjay-kumarrs.github.io/my_portfolio/**
