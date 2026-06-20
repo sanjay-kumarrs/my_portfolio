@@ -211,7 +211,7 @@ const PROJECTS = [
         shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
         category: "ai-ml",
         tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
-        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
+        githubLink: "https://github.com/sanjay-kumarrs/emotion-based-music-system",
         demoLink: "#contact",
         details: {
             overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
