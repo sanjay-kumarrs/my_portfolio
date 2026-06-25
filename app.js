@@ -211,7 +211,7 @@ const PROJECTS = [
         shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
         category: "ai-ml",
         tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
-        githubLink: "https://github.com/sanjay-kumarrs/emotion-based-music-system",
+        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
         demoLink: "#contact",
         details: {
             overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
@@ -273,6 +273,34 @@ const PROJECTS = [
                 "Server setup: cd backend && npm install && npm start",
                 "Frontend setup: cd frontend && npm install && npm start",
                 "Environment config: Create a .env file with MONGODB_URI and JWT_SECRET keys."
+            ]
+        }
+    },
+    {
+        id: "cinemoji",
+        title: "Cinemoji 🎬 Emojis Movie Guessing Game",
+        shortDesc: "A premium, interactive front-end trivia web game where players decode sets of emojis to guess famous movie titles. Built using pure semantic HTML5, modern CSS3 variables/transitions, and modular ES6 JavaScript, the app features fluid animations, custom synthesized sound effects, dark/light themes, and local statistics tracking.",
+        category: "webdev",
+        tags: ["HTML5", "CSS3", "JavaScript", "Web Audio API", "LocalStorage", "ES6 Modules"],
+        githubLink: "https://github.com/sanjay-kumarrs/emoji_game",
+        demoLink: "https://sanjay-kumarrs.github.io/emoji_game/",
+        details: {
+            overview: "Cinemoji is a premium, interactive front-end trivia web game where players decode sets of emojis to guess famous movie titles. Built using pure semantic HTML5, modern CSS3 variables/transitions, and modular ES6 JavaScript, the app features fluid animations, custom synthesized sound effects, dark/light themes, and local statistics tracking.",
+            features: [
+                "Classic Mode: Progress through level-based sets of movies with increasing difficulty. Earn coins and level up.",
+                "Time Attack: Face a ticking clock in a 60-second survival mode where correct answers reward bonus time and mistakes penalize.",
+                "Local Versus: 2 players take turns solving the same series of movie clues on a single device. Features a 30-second turn timer, pass option, active turn badges, and a post-game match summary scoreboard.",
+                "Rich Hint Shop: Use earned coins to unlock hints (Classic/Time Attack modes only): Reveal Genre & Year (15 Coins), Fill One Letter (25 Coins), Skip Movie (50 Coins - Classic Mode only).",
+                "Web Audio Synthesizer: Uses standard browser oscillators to synthesize custom game audio (Clicks, Success Chime, Wrong Answer Buzz, Game Over minor drops, and Win fanfare) without loading external audio assets.",
+                "Settings Drawer: Customize keyboard input layout (switch between dynamic clickable letters grid vs. physical keyboard typing), toggle sound settings, or clear saved statistics.",
+                "Local Leaderboard & Stats: High scores and career statistics (total solved, lifetime coins) are persisted locally via localStorage."
+            ],
+            setup: [
+                "Play Immediately (Zero Setup): Locate index.html in the emoji_game directory and double-click it to open it directly in your web browser.",
+                "Local Dev Server: Open terminal in emoji_game directory.",
+                "Install dev dependencies: npm install",
+                "Spin up local server: npm run dev",
+                "Access at: http://127.0.0.1:8080"
             ]
         }
     }
@@ -431,6 +459,14 @@ document.addEventListener("DOMContentLoaded", () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                             GitHub
                         </a>
+                        ${project.demoLink && project.demoLink !== "#contact" ? `
+                        <a href="${project.demoLink}" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live Demo
+                        </a>
+                        ` : ''}
                     </div>
                 </div>
             `;
@@ -471,6 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalFeatures = document.getElementById("modal-features");
     const modalSetup = document.getElementById("modal-setup");
     const modalGit = document.getElementById("modal-git");
+    const modalDemo = document.getElementById("modal-demo");
 
     function bindDetailButtons() {
         document.querySelectorAll(".btn-details").forEach(btn => {
@@ -492,6 +529,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         .join("");
 
                     modalGit.setAttribute("href", project.githubLink);
+                    
+                    if (project.demoLink && project.demoLink !== "#contact") {
+                        modalDemo.setAttribute("href", project.demoLink);
+                        modalDemo.style.display = "";
+                    } else {
+                        modalDemo.style.display = "none";
+                    }
 
                     // Show Modal
                     modal.classList.add("open");
@@ -519,6 +563,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const setupSection = modalSetup.parentElement;
             if (setupSection) setupSection.style.display = "none";
             if (modalGit) modalGit.style.display = "none";
+            if (modalDemo) modalDemo.style.display = "none";
             
             // Show Modal
             modal.classList.add("open");
@@ -535,6 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const setupSection = modalSetup.parentElement;
             if (setupSection) setupSection.style.display = "";
             if (modalGit) modalGit.style.display = "";
+            if (modalDemo) modalDemo.style.display = "";
         });
 
         // Close on background click
@@ -547,6 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const setupSection = modalSetup.parentElement;
                 if (setupSection) setupSection.style.display = "";
                 if (modalGit) modalGit.style.display = "";
+                if (modalDemo) modalDemo.style.display = "";
             }
         });
     }
