@@ -1,4 +1,4 @@
-# 🛡️ Sanjay Kumar S — Professional Portfolio Website.
+# 🛡️ Sanjay Kumar S — Professional Portfolio Website
 
 A premium, modern, and fully responsive single-page portfolio website showcasing the credentials, skills, and projects of **Sanjay Kumar S** (MCA Postgraduate, Full-Stack Developer, and Cybersecurity Researcher). 
 
