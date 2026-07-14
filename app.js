@@ -730,4 +730,143 @@ document.addEventListener("DOMContentLoaded", () => {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // ==========================================================================
+    // TEXT-TO-SPEECH (TTS) CONTROLLER
+    // ==========================================================================
+    const ttsButtons = {
+        "tts-hero": {
+            button: document.getElementById("tts-hero"),
+            getText: () => {
+                const pretitle = getCleanText(document.querySelector(".hero-pretitle"));
+                const title = getCleanText(document.querySelector(".hero-title"));
+                const subtitle = getCleanText(document.getElementById("typewriter-pitch"));
+                const pitch = getCleanText(document.querySelector(".hero-pitch"));
+                return `${pretitle}. ${title}, ${subtitle}. ${pitch}`;
+            },
+            defaultTitle: "Listen to intro"
+        },
+        "tts-about": {
+            button: document.getElementById("tts-about"),
+            getText: () => {
+                return getCleanText(document.querySelector(".about-text"));
+            },
+            defaultTitle: "Listen to About Me"
+        }
+    };
+
+    let activeTtsId = null;
+    let currentUtterance = null;
+
+    function getCleanText(element) {
+        if (!element) return "";
+        const clone = element.cloneNode(true);
+        // Remove button elements so they aren't read out
+        clone.querySelectorAll(".tts-btn").forEach(btn => btn.remove());
+        return clone.textContent.trim().replace(/\s+/g, " ");
+    }
+
+    if ("speechSynthesis" in window) {
+        // Initialize buttons
+        Object.entries(ttsButtons).forEach(([id, config]) => {
+            const btn = config.button;
+            if (!btn) return;
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // Avoid triggering any card click events
+
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                    
+                    // If the clicked button was the one speaking, we just stop
+                    if (activeTtsId === id) {
+                        resetTtsButtons();
+                        return;
+                    }
+                }
+
+                // Start speaking new text
+                speakText(id, config.getText());
+            });
+        });
+
+        // Cancel speech when user leaves the page to prevent background noise
+        window.addEventListener("beforeunload", () => {
+            window.speechSynthesis.cancel();
+        });
+    } else {
+        // Hide TTS buttons if speech synthesis is not supported
+        Object.values(ttsButtons).forEach(config => {
+            if (config.button) {
+                config.button.style.display = "none";
+            }
+        });
+    }
+
+    function speakText(id, text) {
+        if (!text) return;
+        
+        resetTtsButtons();
+        activeTtsId = id;
+
+        const config = ttsButtons[id];
+        if (config && config.button) {
+            config.button.classList.add("speaking");
+            config.button.setAttribute("title", "Stop listening");
+        }
+
+        currentUtterance = new SpeechSynthesisUtterance(text);
+        
+        // Select an English voice if available
+        const voices = window.speechSynthesis.getVoices();
+        const preferredVoice = voices.find(v => v.lang.startsWith("en") && v.name.includes("Google")) ||
+                               voices.find(v => v.lang.startsWith("en") && (v.name.includes("US") || v.name.includes("UK") || v.name.includes("GB"))) ||
+                               voices.find(v => v.lang.startsWith("en")) ||
+                               voices[0];
+                               
+        if (preferredVoice) {
+            currentUtterance.voice = preferredVoice;
+        }
+
+        currentUtterance.rate = 1.0;
+        currentUtterance.pitch = 1.0;
+
+        currentUtterance.onend = () => {
+            if (activeTtsId === id) {
+                resetTtsButtons();
+            }
+        };
+
+        currentUtterance.onerror = (event) => {
+            // Ignore error from manual cancellation
+            if (event.error !== "interrupted") {
+                console.error("SpeechSynthesisUtterance error:", event);
+            }
+            if (activeTtsId === id) {
+                resetTtsButtons();
+            }
+        };
+
+        window.speechSynthesis.speak(currentUtterance);
+    }
+
+    function resetTtsButtons() {
+        activeTtsId = null;
+        currentUtterance = null;
+        Object.entries(ttsButtons).forEach(([id, config]) => {
+            const btn = config.button;
+            if (btn) {
+                btn.classList.remove("speaking");
+                btn.setAttribute("title", config.defaultTitle);
+            }
+        });
+    }
+
+    // Chrome and some browsers load voices asynchronously, so query voices early
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.getVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+        }
+    }
 });
