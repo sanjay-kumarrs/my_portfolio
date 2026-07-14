@@ -13,6 +13,9 @@ A premium, modern, and fully responsive single-page portfolio website showcasing
 - **📄 Documentation Modals:** Project cards include a "Read Doc" button that opens styled popup overlays containing setup instructions and technical details without page reloads.
 - **🎗️ NSS Outreach Modal:** Interactive NSS certificate card that displays volunteer and coordinator work details upon clicking.
 - **✉️ Direct Contact Accessibility:** Working contact form alongside direct phone call links, email triggers, and a click-to-copy email button with visual feedback.
+- **🗣️ Client-Side Text-to-Speech (TTS):** Integration of a browser-native Web Speech API reader. Visitors can click the modern, glowing speaker icon next to introductory content (Hero and About Me) to listen to a high-quality synthesized voice recording, with smart multi-audio cancellation and automatic UI state cleanup.
+- **🔊 Micro-Animated Soundwaves:** Dynamic SVG speaker icons that animate and pulse using CSS keyframes when audio playback is active, providing clear visual feedback.
+- **🎓 Credential Verification:** Verification-linked certification cards, including the specific **IBM SkillsBuild AI Fundamentals** certificate with a direct Credly verification link.
 - **📈 Motion & Reveal Effects:** Typewriter elevator pitch loop and scroll-triggered fade-up reveal transitions using the *Intersection Observer API*.
 
 ---
@@ -44,10 +47,10 @@ You can run this website on any local development server.
 1. Open a terminal in the project directory.
 2. Run the built-in HTTP server:
    ```bash
-   python -m http.server 8080 --bind 127.0.0.1 
+   python -m http.server 8080 --bind 127.0.0.1
    ```
 3. Open your browser and navigate to:
-   **https://sanjay-kumarrs.github.io/my_portfolio/**
+   **[http://127.0.0.1:8080](http://127.0.0.1:8080)**
 
 ### Option 2: Using Node (http-server)
 1. Install globally: `npm install -g http-server`
