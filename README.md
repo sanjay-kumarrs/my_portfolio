@@ -12,7 +12,7 @@ A premium, modern, and fully responsive single-page portfolio website showcasing
 - **🔍 Dynamic Projects Grid:** Real-time search indexing and category tab filtering (All, Cybersecurity, Web Dev, AI/ML) of projects.
 - **📄 Documentation Modals:** Project cards include a "Read Doc" button that opens styled popup overlays containing setup instructions and technical details without page reloads.
 - **🎗️ NSS Outreach Modal:** Interactive NSS certificate card that displays volunteer and coordinator work details upon clicking.
-- **✉️ Direct Contact Accessibility:** Working contact form alongside direct phone call links, email triggers, and a click-to-copy email button with visual feedback.
+- **✉️ Direct Contact Accessibility & Integration:** Working contact form fully integrated with Formspree using AJAX (`fetch` API) for seamless submissions without page reloads. Features a custom sending spinner state and descriptive inline error/success messages. Includes direct phone links, email triggers, and a click-to-copy email button with visual feedback.
 - **🗣️ Client-Side Text-to-Speech (TTS):** Integration of a browser-native Web Speech API reader. Visitors can click the modern, glowing speaker icon next to introductory content (Hero and About Me) to listen to a high-quality synthesized voice recording, with smart multi-audio cancellation and automatic UI state cleanup.
 - **🔊 Micro-Animated Soundwaves:** Dynamic SVG speaker icons that animate and pulse using CSS keyframes when audio playback is active, providing clear visual feedback.
 - **🎓 Credential Verification:** Verification-linked certification cards, including the specific **IBM SkillsBuild AI Fundamentals** certificate with a direct Credly verification link.
@@ -27,14 +27,14 @@ portfolio/
 │
 ├── index.html          # Semantic HTML5 layout and SEO structure
 ├── style.css           # CSS design system, typography, media queries, and animation definitions
-├── app.js              # Typewriter loop, projects catalog, search filters, and modal controllers
+├── app.js              # Typewriter loop, projects catalog, search filters, modal controllers, and contact submission handler
 │
 ├── assets/
-│   ├── Sanjay_R7.pdf   # PDF resume download file
+│   ├── Sanjay_R9.pdf   # PDF resume download file
 │   └── images/
-│       └── profile_large.jpg # High-resolution portrait photo (Hero & About sections)
+│       └── profile_sec.png # Portrait photo (Hero & About sections)
 │
-└── README[1-7].md      # Documentation files for Sanjay's cybersecurity projects
+└── README[1-8].md      # Documentation files for Sanjay's cybersecurity & full-stack projects
 ```
 
 ---
@@ -50,7 +50,7 @@ You can run this website on any local development server.
    python -m http.server 8080 --bind 127.0.0.1
    ```
 3. Open your browser and navigate to:
-   **[https://sanjay-kumarrs.github.io/my_portfolio/](https://sanjay-kumarrs.github.io/my_portfolio/)**
+   **[http://127.0.0.1:8080](http://127.0.0.1:8080)**
 
 ### Option 2: Using Node (http-server)
 1. Install globally: `npm install -g http-server`
