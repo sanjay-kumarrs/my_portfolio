@@ -699,13 +699,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 Sending...
             `;
 
-            // Simulating API form endpoint call (e.g. Formspree/Web3Forms)
-            setTimeout(() => {
-                showFormStatus("Message sent successfully! Thank you, Sanjay will get back to you shortly.", "success");
-                contactForm.reset();
+            // Submit form to action URL using fetch (Formspree)
+            fetch(contactForm.action, {
+                method: contactForm.method || "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    "Accept": "application/json"
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showFormStatus("Message sent successfully! Thank you, Sanjay will get back to you shortly.", "success");
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (data && data.errors) {
+                            showFormStatus(data.errors.map(err => err.message).join(", "), "error");
+                        } else {
+                            showFormStatus("Oops! There was a problem submitting your form.", "error");
+                        }
+                    }).catch(() => {
+                        showFormStatus("Oops! There was a problem submitting your form.", "error");
+                    });
+                }
+            })
+            .catch(error => {
+                showFormStatus("Oops! Connection error. Please try again later.", "error");
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = origBtnText;
-            }, 1500);
+            });
         });
     }
 
