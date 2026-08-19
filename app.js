@@ -304,7 +304,7 @@ const PROJECTS = [
             ]
         }
     },
-    {
+   {
         id: "tic-tac-toe",
         title: "Tic-Tac-Toe — Multi-Mode Game",
         shortDesc: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes (Human vs AI, Multiplayer 1v1, and Quiz Battle with 55+ questions), a vibrant neon dark theme, and smooth animations.",
