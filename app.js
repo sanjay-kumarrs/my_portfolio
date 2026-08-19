@@ -281,7 +281,7 @@ const PROJECTS = [
         id: "cinemoji",
         title: "Cinemoji 🎬 Emojis Movie Guessing Game",
         shortDesc: "A premium, interactive front-end trivia web game where players decode sets of emojis to guess famous movie titles. Built using pure semantic HTML5, modern CSS3 variables/transitions, and modular ES6 JavaScript, the app features fluid animations, custom synthesized sound effects, dark/light themes, and local statistics tracking.",
-        category: "webdev",
+        category: "games",
         tags: ["HTML5", "CSS3", "JavaScript", "Web Audio API", "LocalStorage", "ES6 Modules"],
         githubLink: "https://github.com/sanjay-kumarrs/emoji_game",
         demoLink: "https://sanjay-kumarrs.github.io/emoji_game/",
@@ -302,6 +302,30 @@ const PROJECTS = [
                 "Install dev dependencies: npm install",
                 "Spin up local server: npm run dev",
                 "Access at: http://127.0.0.1:8080"
+            ]
+        }
+    }
+    {
+        id: "tic-tac-toe",
+        title: "Tic-Tac-Toe — Multi-Mode Game",
+        shortDesc: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes (Human vs AI, Multiplayer 1v1, and Quiz Battle with 55+ questions), a vibrant neon dark theme, and smooth animations.",
+        category: "games",
+        tags: ["HTML5", "CSS3", "JavaScript", "Minimax AI", "Quiz Engine", "Vanilla JS"],
+        githubLink: "https://github.com/sanjay-kumarrs/tic_tac_toe",
+        demoLink: "https://sanjay-kumarrs.github.io/tic_tac_toe/",
+        details: {
+            overview: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes, a vibrant neon dark theme, glassmorphism effects, and smooth animations.",
+            features: [
+                "Human vs AI: Play against an unbeatable AI powered by the Minimax algorithm with alpha-beta pruning.",
+                "Multiplayer (Normal): Classic 1v1 on the same device with standard tic-tac-toe rules.",
+                "Quiz Battle: Two players compete, answering general knowledge questions (55+ questions across Science, History, Geography, Sports, Pop Culture, and Math) with a 10-second timer to earn X/O moves.",
+                "Sudden Death: If Quiz Battle reaches a draw, sudden death allows players to answer harder questions to remove an opponent piece and place their 4th piece.",
+                "Vibrant Neon Design: Particle background with connecting lines, smooth micro-animations, glassmorphism UI, cell pop-ins, win line drawing, and confetti celebration."
+            ],
+            setup: [
+                "Clone or download the project repo: git clone https://github.com/sanjay-kumarrs/tic_tac_toe",
+                "Open index.html directly in any modern web browser (no build tools or dependencies required!).",
+                "Or run using a local HTTP server: npx serve ."
             ]
         }
     }
