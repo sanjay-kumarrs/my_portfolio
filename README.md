@@ -9,7 +9,7 @@ A premium, modern, and fully responsive single-page portfolio website showcasing
 - **🎨 Obsidian Dark Theme:** Sleek dark-mode interface (`#08080C` background) with vibrant neon purple (`#A855F7`) highlights and clean glassmorphism (`backdrop-filter`) cards.
 - **📱 Fully Responsive Design:** Fluidly scales across mobile, tablet, and desktop screens with custom touch-friendly hitboxes and collapsible hamburger navigation.
 - **⚡ Interactive Badges:** Visually rich skills section with custom inline SVG icons for 25+ technologies and frameworks.
-- **🔍 Dynamic Projects Grid:** Real-time search indexing and category tab filtering (All, Cybersecurity, Web Dev, AI/ML) of projects.
+- **🔍 Dynamic Projects Grid:** Real-time search indexing and category tab filtering (All, Cybersecurity, Full-Stack Web, AI & ML, Games) of projects.
 - **📄 Documentation Modals:** Project cards include a "Read Doc" button that opens styled popup overlays containing setup instructions and technical details without page reloads.
 - **🎗️ NSS Outreach Modal:** Interactive NSS certificate card that displays volunteer and coordinator work details upon clicking.
 - **✉️ Direct Contact Accessibility & Integration:** Working contact form fully integrated with Formspree using AJAX (`fetch` API) for seamless submissions without page reloads. Features a custom sending spinner state and descriptive inline error/success messages. Includes direct phone links, email triggers, and a click-to-copy email button with visual feedback.
