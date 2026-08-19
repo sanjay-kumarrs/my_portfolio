@@ -304,7 +304,7 @@ const PROJECTS = [
                 "Access at: http://127.0.0.1:8080"
             ]
         }
-    }
+    },
     {
         id: "tic-tac-toe",
         title: "Tic-Tac-Toe — Multi-Mode Game",
