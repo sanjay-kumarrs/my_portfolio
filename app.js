@@ -5,29 +5,6 @@
 
 // Project Data Compiled from Workspace READMEs & Resume
 const PROJECTS = [
-       {
-        id: "soundwave",
-        title: "SOUNDWAVE: AI Speech Assistance",
-        shortDesc: "An AI-powered speech therapy and real-time assistive application for individuals with stuttering. Utilizes machine learning classification models for speech analysis and a cross-platform Flutter/Dart interface.",
-        category: "ai-ml",
-        tags: ["Python", "Flask", "Machine Learning", "Dart", "Flutter", "Audio Processing"],
-        githubLink: "https://github.com/sanjay-kumarrs/Soundwave",
-        demoLink: "#contact",
-        details: {
-            overview: "SOUNDWAVE processes live audio feeds, classifies stuttering events (repetitions, prolongations, blocks) using ML models, and delivers speech-pacing auditory feedback to help speakers.",
-            features: [
-                "Speech Feature Extraction: Converts raw audio signals to Mel-Frequency Cepstral Coefficients (MFCCs).",
-                "ML Classification Model: Custom-trained model to categorize speech blocks and stuttering patterns.",
-                "Flask API Gateway: Lightweight server serving predictions to mobile devices in real time.",
-                "Cross-Platform Frontend: Flutter app featuring an interactive voice UI, speech exercises, and reports."
-            ],
-            setup: [
-                "Python backend setup: pip install flask numpy scikit-learn librosa",
-                "Run backend: python app.py",
-                "Flutter mobile setup: Ensure Flutter SDK is installed, run flutter run in flutter_app/ directory."
-            ]
-        }
-    },
     {
         id: "risk-assessment",
         title: "Risk Assessment Engine",
@@ -52,30 +29,6 @@ const PROJECTS = [
                 "Install requirements: pip install -r requirements.txt",
                 "Run application: python app.py",
                 "Open browser: http://127.0.0.1:5000"
-            ]
-        }
-    },
-       {
-        id: "emotion-music",
-        title: "Emotion-Based Music Recommender",
-        shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
-        category: "ai-ml",
-        tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
-        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
-        demoLink: "#contact",
-        details: {
-            overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
-            features: [
-                "Real-time Facial Detection: Leverages OpenCV Haar Cascades to track and crop face frames in the browser feed.",
-                "Emotion Classifier Model: CNN trained on the FER2013 dataset (Happy, Sad, Angry, Neutral, Surprised).",
-                "Django Music Controller: Curates and feeds playlists via local databases based on prediction outputs.",
-                "Interactive Web Player: Features sleek playback controls and an integrated webcam capture frame."
-            ],
-            setup: [
-                "Install packages: pip install django opencv-python tensorflow numpy",
-                "Run migrations: python manage.py migrate",
-                "Start development server: python manage.py runserver",
-                "Visit: http://127.0.0.1:8000"
             ]
         }
     },
@@ -126,30 +79,6 @@ const PROJECTS = [
                 "Run dashboard: python dashboard/app.py",
                 "Access dashboard on: http://127.0.0.1:5001",
                 "Execute CLI mode: python -m portsmash_tool full --report-format html"
-            ]
-        }
-    },
-       {
-        id: "food-recipe",
-        title: "Delicious Food Recipe Platform",
-        shortDesc: "A robust Django-based culinary content management platform. Features user profile management, recipe search, ratings, image uploads, and an external API integration for automated nutritional calorie estimations.",
-        category: "webdev",
-        tags: ["Django", "Python", "SQLite", "REST API", "HTML", "CSS", "JavaScript"],
-        githubLink: "https://github.com/sanjay-kumarrs/food-recipe",
-        demoLink: "#contact",
-        details: {
-            overview: "A community-focused web platform allowing food enthusiasts to document, share, and review recipes, with integrated API checks to measure calorie counts instantly.",
-            features: [
-                "Recipe CRUD Operations: Full creation, reading, editing, and deletion controls with photo uploading.",
-                "Calorie Calculator API: Integrates with third-party nutrition APIs to parse ingredient lists and estimate caloric values.",
-                "Review & Rating Engine: Collaborative user feedback system with star ratings and reviews.",
-                "Filterable Search: Search parameters checking prep-time, category, ingredients, and difficulty level."
-            ],
-            setup: [
-                "Navigate to project folder: cd chef_info",
-                "Activate environment and install requirements: pip install django requests",
-                "Apply migrations: python manage.py migrate",
-                "Run: python manage.py runserver"
             ]
         }
     },
@@ -253,7 +182,77 @@ const PROJECTS = [
             ]
         }
     },
-
+    {
+        id: "soundwave",
+        title: "SOUNDWAVE: AI Speech Assistance",
+        shortDesc: "An AI-powered speech therapy and real-time assistive application for individuals with stuttering. Utilizes machine learning classification models for speech analysis and a cross-platform Flutter/Dart interface.",
+        category: "ai-ml",
+        tags: ["Python", "Flask", "Machine Learning", "Dart", "Flutter", "Audio Processing"],
+        githubLink: "https://github.com/sanjay-kumarrs/Soundwave",
+        demoLink: "#contact",
+        details: {
+            overview: "SOUNDWAVE processes live audio feeds, classifies stuttering events (repetitions, prolongations, blocks) using ML models, and delivers speech-pacing auditory feedback to help speakers.",
+            features: [
+                "Speech Feature Extraction: Converts raw audio signals to Mel-Frequency Cepstral Coefficients (MFCCs).",
+                "ML Classification Model: Custom-trained model to categorize speech blocks and stuttering patterns.",
+                "Flask API Gateway: Lightweight server serving predictions to mobile devices in real time.",
+                "Cross-Platform Frontend: Flutter app featuring an interactive voice UI, speech exercises, and reports."
+            ],
+            setup: [
+                "Python backend setup: pip install flask numpy scikit-learn librosa",
+                "Run backend: python app.py",
+                "Flutter mobile setup: Ensure Flutter SDK is installed, run flutter run in flutter_app/ directory."
+            ]
+        }
+    },
+    {
+        id: "emotion-music",
+        title: "Emotion-Based Music Recommender",
+        shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
+        category: "ai-ml",
+        tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
+        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
+        demoLink: "#contact",
+        details: {
+            overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
+            features: [
+                "Real-time Facial Detection: Leverages OpenCV Haar Cascades to track and crop face frames in the browser feed.",
+                "Emotion Classifier Model: CNN trained on the FER2013 dataset (Happy, Sad, Angry, Neutral, Surprised).",
+                "Django Music Controller: Curates and feeds playlists via local databases based on prediction outputs.",
+                "Interactive Web Player: Features sleek playback controls and an integrated webcam capture frame."
+            ],
+            setup: [
+                "Install packages: pip install django opencv-python tensorflow numpy",
+                "Run migrations: python manage.py migrate",
+                "Start development server: python manage.py runserver",
+                "Visit: http://127.0.0.1:8000"
+            ]
+        }
+    },
+    {
+        id: "food-recipe",
+        title: "Delicious Food Recipe Platform",
+        shortDesc: "A robust Django-based culinary content management platform. Features user profile management, recipe search, ratings, image uploads, and an external API integration for automated nutritional calorie estimations.",
+        category: "webdev",
+        tags: ["Django", "Python", "SQLite", "REST API", "HTML", "CSS", "JavaScript"],
+        githubLink: "https://github.com/sanjay-kumarrs/food-recipe",
+        demoLink: "#contact",
+        details: {
+            overview: "A community-focused web platform allowing food enthusiasts to document, share, and review recipes, with integrated API checks to measure calorie counts instantly.",
+            features: [
+                "Recipe CRUD Operations: Full creation, reading, editing, and deletion controls with photo uploading.",
+                "Calorie Calculator API: Integrates with third-party nutrition APIs to parse ingredient lists and estimate caloric values.",
+                "Review & Rating Engine: Collaborative user feedback system with star ratings and reviews.",
+                "Filterable Search: Search parameters checking prep-time, category, ingredients, and difficulty level."
+            ],
+            setup: [
+                "Navigate to project folder: cd chef_info",
+                "Activate environment and install requirements: pip install django requests",
+                "Apply migrations: python manage.py migrate",
+                "Run: python manage.py runserver"
+            ]
+        }
+    },
     {
         id: "ecommerce-plants",
         title: "Plant-Based E-Commerce Application",
