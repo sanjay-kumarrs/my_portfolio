@@ -6,6 +6,29 @@
 // Project Data Compiled from Workspace READMEs & Resume
 const PROJECTS = [
     {
+        id: "soundwave",
+        title: "SOUNDWAVE: AI Speech Assistance",
+        shortDesc: "An AI-powered speech therapy and real-time assistive application for individuals with stuttering. Utilizes machine learning classification models for speech analysis and a cross-platform Flutter/Dart interface.",
+        category: "ai-ml",
+        tags: ["Python", "Flask", "Machine Learning", "Dart", "Flutter", "Audio Processing"],
+        githubLink: "https://github.com/sanjay-kumarrs/Soundwave",
+        demoLink: "#contact",
+        details: {
+            overview: "SOUNDWAVE processes live audio feeds, classifies stuttering events (repetitions, prolongations, blocks) using ML models, and delivers speech-pacing auditory feedback to help speakers.",
+            features: [
+                "Speech Feature Extraction: Converts raw audio signals to Mel-Frequency Cepstral Coefficients (MFCCs).",
+                "ML Classification Model: Custom-trained model to categorize speech blocks and stuttering patterns.",
+                "Flask API Gateway: Lightweight server serving predictions to mobile devices in real time.",
+                "Cross-Platform Frontend: Flutter app featuring an interactive voice UI, speech exercises, and reports."
+            ],
+            setup: [
+                "Python backend setup: pip install flask numpy scikit-learn librosa",
+                "Run backend: python app.py",
+                "Flutter mobile setup: Ensure Flutter SDK is installed, run flutter run in flutter_app/ directory."
+            ]
+        }
+    },
+    {
         id: "risk-assessment",
         title: "Risk Assessment Engine",
         shortDesc: "A comprehensive web-based risk management platform for IT, OT, and IoT assets. Features an Obsidian dark-themed dashboard with real-time KPIs, donut charts, asset registers, CVE tracking, and a 5x5 interactive risk matrix.",
@@ -29,6 +52,30 @@ const PROJECTS = [
                 "Install requirements: pip install -r requirements.txt",
                 "Run application: python app.py",
                 "Open browser: http://127.0.0.1:5000"
+            ]
+        }
+    },
+    {
+        id: "emotion-music",
+        title: "Emotion-Based Music Recommender",
+        shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
+        category: "ai-ml",
+        tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
+        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
+        demoLink: "#contact",
+        details: {
+            overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
+            features: [
+                "Real-time Facial Detection: Leverages OpenCV Haar Cascades to track and crop face frames in the browser feed.",
+                "Emotion Classifier Model: CNN trained on the FER2013 dataset (Happy, Sad, Angry, Neutral, Surprised).",
+                "Django Music Controller: Curates and feeds playlists via local databases based on prediction outputs.",
+                "Interactive Web Player: Features sleek playback controls and an integrated webcam capture frame."
+            ],
+            setup: [
+                "Install packages: pip install django opencv-python tensorflow numpy",
+                "Run migrations: python manage.py migrate",
+                "Start development server: python manage.py runserver",
+                "Visit: http://127.0.0.1:8000"
             ]
         }
     },
@@ -83,6 +130,30 @@ const PROJECTS = [
         }
     },
     {
+        id: "tic-tac-toe",
+        title: "Tic-Tac-Toe — Multi-Mode Game",
+        shortDesc: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes (Human vs AI, Multiplayer 1v1, and Quiz Battle with 55+ questions), a vibrant neon dark theme, and smooth animations.",
+        category: "games",
+        tags: ["HTML5", "CSS3", "JavaScript", "Minimax AI", "Quiz Engine", "Vanilla JS"],
+        githubLink: "https://github.com/sanjay-kumarrs/tic_tac_toe",
+        demoLink: "https://sanjay-kumarrs.github.io/tic_tac_toe/",
+        details: {
+            overview: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes, a vibrant neon dark theme, glassmorphism effects, and smooth animations.",
+            features: [
+                "Human vs AI: Play against an unbeatable AI powered by the Minimax algorithm with alpha-beta pruning.",
+                "Multiplayer (Normal): Classic 1v1 on the same device with standard tic-tac-toe rules.",
+                "Quiz Battle: Two players compete, answering general knowledge questions (55+ questions across Science, History, Geography, Sports, Pop Culture, and Math) with a 10-second timer to earn X/O moves.",
+                "Sudden Death: If Quiz Battle reaches a draw, sudden death allows players to answer harder questions to remove an opponent piece and place their 4th piece.",
+                "Vibrant Neon Design: Particle background with connecting lines, smooth micro-animations, glassmorphism UI, cell pop-ins, win line drawing, and confetti celebration."
+            ],
+            setup: [
+                "Clone or download the project repo: git clone https://github.com/sanjay-kumarrs/tic_tac_toe",
+                "Open index.html directly in any modern web browser (no build tools or dependencies required!).",
+                "Or run using a local HTTP server: npx serve ."
+            ]
+        }
+    },
+    {
         id: "sidechannel-side",
         title: "Side_Channel — Static Analysis & Detection Tool",
         shortDesc: "A modular, interactive CLI tool to detect side-channel attack vectors. Covers timing analysis, cache-hierarchy audits (Flush+Reload indicators), RAPL power domains (PLATYPUS), speculative execution vulnerabilities, and crypto code analysis.",
@@ -128,6 +199,30 @@ const PROJECTS = [
                 "Configure config.py with optional Webhook / SMTP details.",
                 "Run SIEM: python app.py",
                 "Open browser: http://localhost:5000"
+            ]
+        }
+    },
+    {
+        id: "food-recipe",
+        title: "Delicious Food Recipe Platform",
+        shortDesc: "A robust Django-based culinary content management platform. Features user profile management, recipe search, ratings, image uploads, and an external API integration for automated nutritional calorie estimations.",
+        category: "webdev",
+        tags: ["Django", "Python", "SQLite", "REST API", "HTML", "CSS", "JavaScript"],
+        githubLink: "https://github.com/sanjay-kumarrs/food-recipe",
+        demoLink: "#contact",
+        details: {
+            overview: "A community-focused web platform allowing food enthusiasts to document, share, and review recipes, with integrated API checks to measure calorie counts instantly.",
+            features: [
+                "Recipe CRUD Operations: Full creation, reading, editing, and deletion controls with photo uploading.",
+                "Calorie Calculator API: Integrates with third-party nutrition APIs to parse ingredient lists and estimate caloric values.",
+                "Review & Rating Engine: Collaborative user feedback system with star ratings and reviews.",
+                "Filterable Search: Search parameters checking prep-time, category, ingredients, and difficulty level."
+            ],
+            setup: [
+                "Navigate to project folder: cd chef_info",
+                "Activate environment and install requirements: pip install django requests",
+                "Apply migrations: python manage.py migrate",
+                "Run: python manage.py runserver"
             ]
         }
     },
@@ -183,77 +278,6 @@ const PROJECTS = [
         }
     },
     {
-        id: "soundwave",
-        title: "SOUNDWAVE: AI Speech Assistance",
-        shortDesc: "An AI-powered speech therapy and real-time assistive application for individuals with stuttering. Utilizes machine learning classification models for speech analysis and a cross-platform Flutter/Dart interface.",
-        category: "ai-ml",
-        tags: ["Python", "Flask", "Machine Learning", "Dart", "Flutter", "Audio Processing"],
-        githubLink: "https://github.com/sanjay-kumarrs/Soundwave",
-        demoLink: "#contact",
-        details: {
-            overview: "SOUNDWAVE processes live audio feeds, classifies stuttering events (repetitions, prolongations, blocks) using ML models, and delivers speech-pacing auditory feedback to help speakers.",
-            features: [
-                "Speech Feature Extraction: Converts raw audio signals to Mel-Frequency Cepstral Coefficients (MFCCs).",
-                "ML Classification Model: Custom-trained model to categorize speech blocks and stuttering patterns.",
-                "Flask API Gateway: Lightweight server serving predictions to mobile devices in real time.",
-                "Cross-Platform Frontend: Flutter app featuring an interactive voice UI, speech exercises, and reports."
-            ],
-            setup: [
-                "Python backend setup: pip install flask numpy scikit-learn librosa",
-                "Run backend: python app.py",
-                "Flutter mobile setup: Ensure Flutter SDK is installed, run flutter run in flutter_app/ directory."
-            ]
-        }
-    },
-    {
-        id: "emotion-music",
-        title: "Emotion-Based Music Recommender",
-        shortDesc: "An intelligent music player that detects user mood in real time through webcams using Convolutional Neural Networks (CNN) and recommends personalized playlists on a Django web platform.",
-        category: "ai-ml",
-        tags: ["Python", "OpenCV", "TensorFlow", "Keras", "Django", "Computer Vision"],
-        githubLink: "https://github.com/sanjay-kumars/emotion-music-system",
-        demoLink: "#contact",
-        details: {
-            overview: "An end-to-end computer vision and web project that captures face inputs, classifies facial expressions into primary emotions, and retrieves curated tracks matching the detected state.",
-            features: [
-                "Real-time Facial Detection: Leverages OpenCV Haar Cascades to track and crop face frames in the browser feed.",
-                "Emotion Classifier Model: CNN trained on the FER2013 dataset (Happy, Sad, Angry, Neutral, Surprised).",
-                "Django Music Controller: Curates and feeds playlists via local databases based on prediction outputs.",
-                "Interactive Web Player: Features sleek playback controls and an integrated webcam capture frame."
-            ],
-            setup: [
-                "Install packages: pip install django opencv-python tensorflow numpy",
-                "Run migrations: python manage.py migrate",
-                "Start development server: python manage.py runserver",
-                "Visit: http://127.0.0.1:8000"
-            ]
-        }
-    },
-    {
-        id: "food-recipe",
-        title: "Delicious Food Recipe Platform",
-        shortDesc: "A robust Django-based culinary content management platform. Features user profile management, recipe search, ratings, image uploads, and an external API integration for automated nutritional calorie estimations.",
-        category: "webdev",
-        tags: ["Django", "Python", "SQLite", "REST API", "HTML", "CSS", "JavaScript"],
-        githubLink: "https://github.com/sanjay-kumarrs/food-recipe",
-        demoLink: "#contact",
-        details: {
-            overview: "A community-focused web platform allowing food enthusiasts to document, share, and review recipes, with integrated API checks to measure calorie counts instantly.",
-            features: [
-                "Recipe CRUD Operations: Full creation, reading, editing, and deletion controls with photo uploading.",
-                "Calorie Calculator API: Integrates with third-party nutrition APIs to parse ingredient lists and estimate caloric values.",
-                "Review & Rating Engine: Collaborative user feedback system with star ratings and reviews.",
-                "Filterable Search: Search parameters checking prep-time, category, ingredients, and difficulty level."
-            ],
-            setup: [
-                "Navigate to project folder: cd chef_info",
-                "Activate environment and install requirements: pip install django requests",
-                "Apply migrations: python manage.py migrate",
-                "Run: python manage.py runserver"
-            ]
-        }
-    },
-    {
         id: "ecommerce-plants",
         title: "Plant-Based E-Commerce Application",
         shortDesc: "A full-stack MERN Web App for plant enthusiasts. Features secure JWT authentication, a responsive product catalog, shopping cart state management, and an admin dashboard to control products and orders.",
@@ -303,31 +327,8 @@ const PROJECTS = [
                 "Access at: http://127.0.0.1:8080"
             ]
         }
-    },
-   {
-        id: "tic-tac-toe",
-        title: "Tic-Tac-Toe — Multi-Mode Game",
-        shortDesc: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes (Human vs AI, Multiplayer 1v1, and Quiz Battle with 55+ questions), a vibrant neon dark theme, and smooth animations.",
-        category: "games",
-        tags: ["HTML5", "CSS3", "JavaScript", "Minimax AI", "Quiz Engine", "Vanilla JS"],
-        githubLink: "https://github.com/sanjay-kumarrs/tic_tac_toe",
-        demoLink: "https://sanjay-kumarrs.github.io/tic_tac_toe/",
-        details: {
-            overview: "A feature-rich, beautifully designed Tic-Tac-Toe game built with vanilla HTML, CSS, and JavaScript. Featuring three distinct game modes, a vibrant neon dark theme, glassmorphism effects, and smooth animations.",
-            features: [
-                "Human vs AI: Play against an unbeatable AI powered by the Minimax algorithm with alpha-beta pruning.",
-                "Multiplayer (Normal): Classic 1v1 on the same device with standard tic-tac-toe rules.",
-                "Quiz Battle: Two players compete, answering general knowledge questions (55+ questions across Science, History, Geography, Sports, Pop Culture, and Math) with a 10-second timer to earn X/O moves.",
-                "Sudden Death: If Quiz Battle reaches a draw, sudden death allows players to answer harder questions to remove an opponent piece and place their 4th piece.",
-                "Vibrant Neon Design: Particle background with connecting lines, smooth micro-animations, glassmorphism UI, cell pop-ins, win line drawing, and confetti celebration."
-            ],
-            setup: [
-                "Clone or download the project repo: git clone https://github.com/sanjay-kumarrs/tic_tac_toe",
-                "Open index.html directly in any modern web browser (no build tools or dependencies required!).",
-                "Or run using a local HTTP server: npx serve ."
-            ]
-        }
     }
+
 ];
 
 // Document Elements
@@ -345,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mobile Navigation Hamburger Toggle
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("navMenu");
-    
+
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("open");
@@ -365,13 +366,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
     window.addEventListener("scroll", () => {
         const scrollY = window.pageYOffset;
-        
+
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 100;
             const sectionId = current.getAttribute("id");
             const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
-            
+
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLink.classList.add("active");
@@ -399,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!typewriterElement) return;
 
         const currentRole = roles[roleIndex];
-        
+
         if (isDeleting) {
             typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
@@ -421,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(handleTypewriter, typewriterDelay);
     }
-    
+
     // Start Typewriter
     setTimeout(handleTypewriter, 1000);
 
@@ -435,15 +436,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderProjects() {
         if (!projectsGrid) return;
-        
+
         projectsGrid.innerHTML = "";
-        
+
         // Filter & Search logic
         const filteredProjects = PROJECTS.filter(project => {
             const matchesCategory = activeFilter === "all" || project.category === activeFilter;
-            const matchesSearch = project.title.toLowerCase().includes(activeSearchQuery) || 
-                                 project.shortDesc.toLowerCase().includes(activeSearchQuery) ||
-                                 project.tags.some(tag => tag.toLowerCase().includes(activeSearchQuery));
+            const matchesSearch = project.title.toLowerCase().includes(activeSearchQuery) ||
+                project.shortDesc.toLowerCase().includes(activeSearchQuery) ||
+                project.tags.some(tag => tag.toLowerCase().includes(activeSearchQuery));
             return matchesCategory && matchesSearch;
         });
 
@@ -541,19 +542,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (project && modal) {
                     modalTitle.textContent = project.title;
                     modalOverview.textContent = project.details.overview;
-                    
+
                     // Features list
                     modalFeatures.innerHTML = project.details.features
                         .map(feat => `<li><span class="feat-bullet">⚡</span> ${feat}</li>`)
                         .join("");
-                        
+
                     // Setup list
                     modalSetup.innerHTML = project.details.setup
                         .map(step => `<li><span class="setup-num"></span>${step}</li>`)
                         .join("");
 
                     modalGit.setAttribute("href", project.githubLink);
-                    
+
                     if (project.demoLink && project.demoLink !== "#contact") {
                         modalDemo.setAttribute("href", project.demoLink);
                         modalDemo.style.display = "";
@@ -575,20 +576,20 @@ document.addEventListener("DOMContentLoaded", () => {
         nssCard.addEventListener("click", () => {
             modalTitle.textContent = "National Service Scheme (NSS)";
             modalOverview.textContent = "Served as an active volunteer and student coordinator for the National Service Scheme (NSS) from 2021 to 2023, representing my institution and leading community services, awareness drives, and social welfare campaigns.";
-            
+
             modalFeatures.innerHTML = `
                 <li><span class="feat-bullet">⚡</span> Coordinated community service initiatives, state awareness campaigns, and volunteer meetings.</li>
                 <li><span class="feat-bullet">⚡</span> Participated in the National Integration Camp and State-Level NSS Camp, representing the institution.</li>
                 <li><span class="feat-bullet">⚡</span> Led environmental preservation drives, blood donation camps, and local community service activities.</li>
                 <li><span class="feat-bullet">⚡</span> Cultivated core management, teamwork, social responsibility, and leadership qualities.</li>
             `;
-            
+
             // Hide Setup section & GitHub link
             const setupSection = modalSetup.parentElement;
             if (setupSection) setupSection.style.display = "none";
             if (modalGit) modalGit.style.display = "none";
             if (modalDemo) modalDemo.style.display = "none";
-            
+
             // Show Modal
             modal.classList.add("open");
             document.body.style.overflow = "hidden";
@@ -599,7 +600,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modalClose.addEventListener("click", () => {
             modal.classList.remove("open");
             document.body.style.overflow = ""; // restore scroll
-            
+
             // Restore hidden setup section & github link
             const setupSection = modalSetup.parentElement;
             if (setupSection) setupSection.style.display = "";
@@ -612,7 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target === modal) {
                 modal.classList.remove("open");
                 document.body.style.overflow = "";
-                
+
                 // Restore hidden setup section & github link
                 const setupSection = modalSetup.parentElement;
                 if (setupSection) setupSection.style.display = "";
@@ -636,7 +637,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </svg>
                 `;
                 copyEmailBtn.style.borderColor = "#10B981";
-                
+
                 setTimeout(() => {
                     copyEmailBtn.innerHTML = origIcon;
                     copyEmailBtn.style.borderColor = "";
@@ -656,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
             backToTopBtn.classList.remove("visible");
         }
     });
-    
+
     if (backToTopBtn) {
         backToTopBtn.addEventListener("click", () => {
             window.scrollTo({
@@ -669,7 +670,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Scroll Reveal implementation using Intersection Observer
     function observeScrollReveals() {
         const revealElements = document.querySelectorAll(".reveal");
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -685,7 +686,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         revealElements.forEach(el => observer.observe(el));
     }
-    
+
     observeScrollReveals();
 
     // Contact Form submission handling with modern validation
@@ -695,17 +696,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contactForm) {
         contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            
+
             const name = document.getElementById("form-name").value.trim();
             const email = document.getElementById("form-email").value.trim();
             const subject = document.getElementById("form-subject").value.trim();
             const message = document.getElementById("form-message").value.trim();
-            
+
             if (!name || !email || !subject || !message) {
                 showFormStatus("Please fill in all fields.", "error");
                 return;
             }
-            
+
             if (!validateEmail(email)) {
                 showFormStatus("Please enter a valid email address.", "error");
                 return;
@@ -731,29 +732,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Accept": "application/json"
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    showFormStatus("Message sent successfully! Thank you, Sanjay will get back to you shortly.", "success");
-                    contactForm.reset();
-                } else {
-                    response.json().then(data => {
-                        if (data && data.errors) {
-                            showFormStatus(data.errors.map(err => err.message).join(", "), "error");
-                        } else {
+                .then(response => {
+                    if (response.ok) {
+                        showFormStatus("Message sent successfully! Thank you, Sanjay will get back to you shortly.", "success");
+                        contactForm.reset();
+                    } else {
+                        response.json().then(data => {
+                            if (data && data.errors) {
+                                showFormStatus(data.errors.map(err => err.message).join(", "), "error");
+                            } else {
+                                showFormStatus("Oops! There was a problem submitting your form.", "error");
+                            }
+                        }).catch(() => {
                             showFormStatus("Oops! There was a problem submitting your form.", "error");
-                        }
-                    }).catch(() => {
-                        showFormStatus("Oops! There was a problem submitting your form.", "error");
-                    });
-                }
-            })
-            .catch(error => {
-                showFormStatus("Oops! Connection error. Please try again later.", "error");
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = origBtnText;
-            });
+                        });
+                    }
+                })
+                .catch(error => {
+                    showFormStatus("Oops! Connection error. Please try again later.", "error");
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = origBtnText;
+                });
         });
     }
 
@@ -762,7 +763,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formStatus.textContent = msg;
         formStatus.className = `form-status ${type}`;
         formStatus.style.display = "flex";
-        
+
         // Auto scroll to status if needed
         formStatus.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
@@ -825,7 +826,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (window.speechSynthesis.speaking) {
                     window.speechSynthesis.cancel();
-                    
+
                     // If the clicked button was the one speaking, we just stop
                     if (activeTtsId === id) {
                         resetTtsButtons();
@@ -853,7 +854,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function speakText(id, text) {
         if (!text) return;
-        
+
         resetTtsButtons();
         activeTtsId = id;
 
@@ -864,14 +865,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         currentUtterance = new SpeechSynthesisUtterance(text);
-        
+
         // Select an English voice if available
         const voices = window.speechSynthesis.getVoices();
         const preferredVoice = voices.find(v => v.lang.startsWith("en") && v.name.includes("Google")) ||
-                               voices.find(v => v.lang.startsWith("en") && (v.name.includes("US") || v.name.includes("UK") || v.name.includes("GB"))) ||
-                               voices.find(v => v.lang.startsWith("en")) ||
-                               voices[0];
-                               
+            voices.find(v => v.lang.startsWith("en") && (v.name.includes("US") || v.name.includes("UK") || v.name.includes("GB"))) ||
+            voices.find(v => v.lang.startsWith("en")) ||
+            voices[0];
+
         if (preferredVoice) {
             currentUtterance.voice = preferredVoice;
         }
