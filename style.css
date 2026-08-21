@@ -870,6 +870,14 @@ button {
     flex-grow: 1;
 }
 
+.project-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
 .project-cat {
     font-family: var(--font-mono);
     color: var(--accent-purple);
@@ -877,7 +885,30 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 0.75rem;
+}
+
+.setup-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-purple);
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.setup-badge:hover {
+    background: var(--grad-primary);
+    color: #ffffff;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+    transform: translateY(-1px);
 }
 
 .project-title {
