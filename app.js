@@ -29,6 +29,30 @@ const PROJECTS = [
         }
     },
     {
+        id: "cloudvault",
+        title: "CloudVault — AWS File-Management System",
+        shortDesc: "A secure AWS file-management system built with React, Flask, Cognito authentication, private S3 storage, DynamoDB metadata, and asynchronous S3 → SQS → Lambda processing.",
+        category: "cloud",
+        tags: ["AWS", "React", "Flask", "Cognito", "S3", "DynamoDB", "Lambda", "SQS", "Python"],
+        githubLink: "https://github.com/sanjay-kumarrs/CloudVault",
+        demoLink: "#contact",
+        details: {
+            overview: "CloudVault is a secure AWS file-management system built to demonstrate React, Flask, Cognito authentication, private S3 storage, DynamoDB metadata, and asynchronous S3 → SQS → Lambda processing.",
+            features: [
+                "Cognito Sign-up & Sign-in: Secure user authentication, email verification, token management, and protected routes.",
+                "User-Scoped Flask API: Validates Cognito ID tokens to isolate user files under dedicated S3 prefixes and DynamoDB keys.",
+                "Private S3 & DynamoDB Metadata: Secure file upload, listing, deletion, and short-lived pre-signed download URLs without public bucket access.",
+                "Asynchronous Processing Pipeline: Automated S3 object-created event notifications route through SQS queues to Lambda for DynamoDB status updates (QUEUED → PROCESSING → PROCESSED).",
+                "Validation & Security Controls: Configurable file type and size restrictions (PDF, images, DOCX, XLSX, TXT) with least-privilege IAM enforcement."
+            ],
+            setup: [
+                "Backend setup: cd backend && py -m venv .venv && .\\.venv\\Scripts\\Activate.ps1 && pip install -r requirements.txt && python run.py",
+                "Frontend setup: cd frontend && npm install && npm run dev",
+                "AWS Configuration: Configure local AWS credentials and provision Cognito User Pool, private S3 bucket, DynamoDB table, SQS queue, and Lambda processor."
+            ]
+        }
+    },
+    {
         id: "risk-assessment",
         title: "Risk Assessment Engine",
         shortDesc: "A comprehensive web-based risk management platform for IT, OT, and IoT assets. Features an Obsidian dark-themed dashboard with real-time KPIs, donut charts, asset registers, CVE tracking, and a 5x5 interactive risk matrix.",
@@ -466,19 +490,26 @@ document.addEventListener("DOMContentLoaded", () => {
             projectCard.className = `project-card reveal reveal-delay-${(idx % 4) + 1}`;
             projectCard.innerHTML = `
                 <div class="project-body">
-                    <div class="project-cat">${project.category.replace("-", " ")}</div>
+                    <div class="project-header-meta">
+                        <div class="project-cat">${project.category.replace("-", " ")}</div>
+                        <span class="setup-badge btn-details" data-id="${project.id}" title="View installation and setup guide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 00-2 2z" />
+                            </svg>
+                            Setup Guide
+                        </span>
+                    </div>
                     <h3 class="project-title">${project.title}</h3>
                     <p class="project-desc">${project.shortDesc}</p>
                     <div class="project-tech">
                         ${project.tags.map(tag => `<span class="tech-tag">${tag}</span>`).join("")}
                     </div>
                     <div class="project-links">
-                        <button class="project-link btn-details" data-id="${project.id}" style="background:transparent; border:none; padding:0; cursor:pointer;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        <button class="project-link btn-details" data-id="${project.id}" style="background:transparent; border:none; padding:0; cursor:pointer;" title="View installation & setup guide">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 00-2 2z" />
                             </svg>
-                            Read Doc
+                            Read Docs
                         </button>
                         <a href="${project.githubLink}" target="_blank" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
@@ -548,9 +579,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         .map(feat => `<li><span class="feat-bullet">⚡</span> ${feat}</li>`)
                         .join("");
 
-                    // Setup list
+                    // Setup list with numbered setup badges
                     modalSetup.innerHTML = project.details.setup
-                        .map(step => `<li><span class="setup-num"></span>${step}</li>`)
+                        .map((step, stepIdx) => `<li><span class="setup-num">${stepIdx + 1}</span>${step}</li>`)
                         .join("");
 
                     modalGit.setAttribute("href", project.githubLink);
